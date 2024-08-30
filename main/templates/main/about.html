@@ -1,0 +1,207 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block pagename %}
+    О компании
+{% endblock pagename %}
+
+{% block activeabout %}active{% endblock activeabout %}
+
+{% block startimagelink %}
+    {% static "deps/images/bg_3.jpg" %}  
+{% endblock startimagelink %}   
+
+{% block keywords %}about{% endblock keywords %}
+
+
+{% block firstsectionin_about %}
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+    <div class="container">
+        <div class="row d-flex no-gutters">
+            <div class="col-md-6 d-flex">
+                <div class="img img-video d-flex align-self-stretch align-items-center justify-content-center justify-content-md-end" style="background-image:url({% static 'deps/images/aboutus.jpg' %});">
+                    {% comment %} <a href="https://vimeo.com/45830194" class="icon-video popup-vimeo d-flex justify-content-center align-items-center"> {% endcomment %}
+                        {% comment %} <span class="icon-play"></span> {% endcomment %}
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6 pl-md-5">
+                <div class="row justify-content-start py-5">
+              <div class="col-md-12 heading-section ftco-animate pl-md-4 py-md-4">
+                  <span class="subheading">Добро пожаловать в ПавловСтрой!</span>
+                <h2 class="mb-4">Мы строим Ваше будущее!</h2>
+                <p><b>Компания ПавловСтрой создаёт Вашу историю!</b></p>
+                <div class="tabulation-2 mt-4">
+                                <ul class="nav nav-pills nav-fill d-md-flex d-block">
+                                  <li class="nav-item mb-md-0 mb-2">
+                                    <a class="nav-link active py-2" data-toggle="tab" href="#home1">Наш опыт</a>
+                                  </li>
+                                  <li class="nav-item px-lg-2 mb-md-0 mb-2">
+                                    <a class="nav-link py-2" data-toggle="tab" href="#home2">Наше видение</a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link py-2 mb-md-0 mb-2" data-toggle="tab" href="#home3">Наши достижения</a>
+                                  </li>
+                                </ul>
+                                <div class="tab-content bg-light rounded mt-2">
+                                  <div class="tab-pane container p-0 active" id="home1">
+                                      <p>Добро пожаловать на сайт нашей компании, которая уже 7 лет успешно работает на рынке строительства домов под заказ. Мы гордимся тем, что за это время смогли зарекомендовать себя как надежный партнер для наших клиентов. Наша команда состоит из опытных профессионалов. Мы предлагаем полный спектр услуг "под ключ", что позволяет вам не беспокоиться о деталях и сосредоточиться на своих планах.</p>
+                                  </div>
+                                  <div class="tab-pane container p-0 fade" id="home2">
+                                      <p>Каждый проект начинается с детального обсуждения ваших пожеланий и требований. Мы понимаем, что дом — это не просто здание, а место, где будет формироваться ваша история. Поэтому мы внимательно слушаем каждое ваше слово, чтобы создать именно тот дом, о котором вы мечтаете. Наша компания предлагает индивидуальные решения, учитывающие все ваши предпочтения и бюджет. Расчёт индивидуален для каждого!</p>
+                                  </div>
+                                  <div class="tab-pane container p-0 fade" id="home3">
+                                      <p>С момента основания мы реализовали множество успешных проектов, и каждый из них стал для нас не просто работой, а настоящим искусством. Мы используем только качественные материалы и современные технологии, что гарантирует долговечность и надежность ваших новых стен. Наша команда профессионалов следит за всеми этапами строительства, чтобы вы могли быть уверены в высоком уровне исполнения.</p>
+                                  </div>
+                                </div>
+                            </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock firstsectionin_about %}
+
+
+{% block twosectionin_about %}
+<section class="ftco-counter" id="section-counter">
+    <div class="container">
+            <div class="row">
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 d-flex">
+          <div class="text d-flex align-items-center">
+            <strong class="number" data-number="7">1</strong>
+          </div>
+          <div class="text-2">
+              <span>Лет<br>Непрерывного опыта</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 d-flex">
+          <div class="text d-flex align-items-center">
+            <strong class="number" data-number="118">0</strong>
+          </div>
+          <div class="text-2">
+              <span>Завершённых <br>Проектов</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 d-flex">
+          <div class="text d-flex align-items-center">
+            <strong class="number" data-number="71">0</strong>
+          </div>
+          <div class="text-2">
+              <span>Штатных <br>Экспертов</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap ftco-animate">
+        <div class="block-18 d-flex">
+          <div class="text d-flex align-items-center">
+            <strong class="number" data-number="450">0</strong>
+          </div>
+          <div class="text-2">
+              <span>Единиц <br>Строительной техники</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+{% endblock twosectionin_about %}
+
+
+
+
+{% block threesectionin_about %}
+<section class="ftco-section ftco-no-pt ftco-no-pb">
+    <div class="container-fluid px-md-0">
+  <div class="row no-gutters">
+    <div class="col-md-4 ftco-animate">
+      <div class="work img d-flex align-items-end" style="background-image: url({% static 'deps/images/injer.jpg' %});">
+          <a href="{% static 'deps/images/injer.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                  </a>
+          <div class="desc w-100 px-4">
+            <div class="text w-100 mb-3">
+                <span>Инженерный отдел</span>
+                <h2><a href="work-single.html">В нашем штабе работают 15 профессиональных инженеров разных областей</a></h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+      <div class="work img d-flex align-items-end" style="background-image: url({% static 'deps/images/caches.jpg' %});">
+          <a href="{% static 'deps/images/caches.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                  </a>
+          <div class="desc w-100 px-4">
+            <div class="text w-100 mb-3">
+                <span>Отдел качества</span>
+                <h2><a href="work-single.html">Мы внимательно следим за качеством проводимых работ на всех этапах</a></h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+      <div class="work img d-flex align-items-end" style="background-image: url({% static 'deps/images/servis.jpg' %});">
+          <a href="{% static 'deps/images/servis.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                  </a>
+          <div class="desc w-100 px-4">
+            <div class="text w-100 mb-3">
+                <span>Сервисный отдел</span>
+                <h2><a href="work-single.html">На этапе строительства мы будем регулярно связыватся с вами по интересующим вопросам</a></h2>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 ftco-animate">
+      <div class="work img d-flex align-items-end" style="background-image: url({% static 'deps/images/urotdel.jpg' %});">
+          <a href="{% static 'deps/images/urotdel.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                  </a>
+          <div class="desc w-100 px-4">
+            <div class="text w-100 mb-3">
+                <span>Юридический отдел</span>
+                <h2><a href="work-single.html">Проведёт по всем этапам заключения документов</a></h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+      <div class="work img d-flex align-items-end" style="background-image: url({% static 'deps/images/pto.jpg' %});">
+          <a href="{% static 'deps/images/pto.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                  </a>
+          <div class="desc w-100 px-4">
+            <div class="text w-100 mb-3">
+                <span>Производственно-технический отдел</span>
+                <h2><a href="work-single.html">Контролирует техническую и юридическую часть проведения строительных работ</a></h2>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 ftco-animate">
+      <div class="work img d-flex align-items-end" style="background-image: url({% static 'deps/images/finan.jpg' %});">
+          <a href="{% static 'deps/images/finan.jpg' %}" class="icon image-popup d-flex justify-content-center align-items-center">
+                      <span class="icon-expand"></span>
+                  </a>
+          <div class="desc w-100 px-4">
+            <div class="text w-100 mb-3">
+                <span>Финансовый отдел</span>
+                <h2><a href="work-single.html">Занимается бюджетным финансирвоанием, а также учетом затрат и доходов на этапе согласования проекта</a></h2>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+  </section>
+{% endblock threesectionin_about %}
+
+  

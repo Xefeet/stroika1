@@ -1,0 +1,245 @@
+{% load static %}
+{% load macros %}
+{% macro pagename %}
+	{% block pagename %}{% endblock pagename %}
+{% endmacro %}
+{% macro startimagelink %}
+	{% block startimagelink %}{% endblock startimagelink %}
+{% endmacro %}
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {% block title %}{% endblock title %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" >
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="{% static "deps/css/animate.css" %}">
+    
+    <link rel="stylesheet" href="{% static "deps/css/owl.carousel.min.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/owl.theme.default.min.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/magnific-popup.css" %}">
+
+    <link rel="stylesheet" href="{% static "deps/css/ionicons.min.css" %}">
+    
+    <link rel="stylesheet" href="{% static "deps/css/flaticon.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/icomoon.css" %}">
+    <link rel="stylesheet" href="{% static "deps/css/style.css" %}">
+
+	<meta name="keywords" content="{% block keywords %}Главные{% endblock keywords %}">
+  </head>
+  <body>
+{% comment %} начальный блок {% endcomment %}
+    <div class="container pt-5">
+			<div class="row justify-content-between">
+				<div class="col">
+					<a class="navbar-brand" href="{% url "index" %}">Павлов<span>Строй.</span></a>
+				</div>
+				<div class="col d-flex justify-content-end">
+					<div class="social-media">
+		    		<p class="mb-0 d-flex">
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-telegram"><i class="sr-only">Telegram</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-whatsapp"><i class="sr-only">Whatsap</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-envelope"><i class="sr-only">Mail</i></span></a>
+		    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-phone"><i class="sr-only">Phone</i></span></a>
+		    		</p>
+	        </div>
+				</div>
+			</div>
+		</div>
+{% comment %} конец начального блока {% endcomment %}
+
+{% comment %} Навигационная панель {% endcomment %}
+		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+            
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Меню
+              </button>
+                    <form action="#" class="searchform order-lg-last">
+              <div class="form-group d-flex">
+                <input type="text" class="form-control pl-3" placeholder="Поиск">
+                <button type="submit" placeholder="" class="form-control search"><span class="fa fa-search"></span></button>
+              </div>
+            </form>
+              <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="{% url "index" %}" class="nav-link">Главная</a></li>
+                    <li class="nav-item {% block activeabout %}{% endblock activeabout %}"><a href="{% url "about" %}" class="nav-link">О компании</a></li>
+                    {% comment %} <li class="nav-item"><a href="team.html" class="nav-link">Our team</a></li> {% endcomment %}
+                    <li class="nav-item {% block activeprojects %}{% endblock activeprojects %}"><a href="{% url "projects" %}" class="nav-link">Проекты</a></li>
+                    <li class="nav-item {% block activetypes %}{% endblock activetypes %}"><a href="{% url "types" %}" class="nav-link">Виды работ</a></li>
+                  <li class="nav-item {% block activecontact %}{% endblock activecontact %}"><a href="{% url "contact" %}" class="nav-link">Контакты</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+{% comment %} конец навигационного блока {% endcomment %}
+
+{% comment %} представление страницы {% endcomment %}
+	  <section class="hero-wrap hero-wrap-2" style="background-image: url({% use_macro startimagelink %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+		  <div class="row no-gutters slider-text align-items-end">
+			<div class="col-md-9 ftco-animate pb-5">
+				<p class="breadcrumbs mb-2"><span class="mr-2"><a href="{% url "index" %}">Главная <i class="ion-ios-arrow-forward"></i></a></span> <span>{% use_macro pagename %}<i class="ion-ios-arrow-forward"></i></span></p>
+			  <h1 class="mb-0 bread">{% use_macro pagename %}</h1>
+			</div>
+		  </div>
+		</div>
+	  </section>
+{% comment %} конец представления страницы {% endcomment %}
+
+{% comment %} начало первого блока страницы about {% endcomment %}
+{% block firstsectionin_about %}
+{% endblock firstsectionin_about %}
+{% comment %} конец первого блока страницы about {% endcomment %}
+
+{% comment %} начало второго блока страницы about {% endcomment %}
+{% block twosectionin_about %}{% endblock twosectionin_about %}
+{% comment %} конец второго блока страницы about {% endcomment %}
+
+{% comment %} начало третьего блока страницы about {% endcomment %}
+{% block threesectionin_about %}{% endblock threesectionin_about %}  
+{% comment %} конец третьего блока страницы about {% endcomment %}
+
+
+
+{% comment %} начало первого блока страницы projects {% endcomment %}
+ {% block firstsectionin_projects %}{% endblock firstsectionin_projects %}
+{% comment %} конец первого блока страницы projects {% endcomment %}
+
+{% comment %} начало второго блока страницы projects {% endcomment %}
+ {% block twosectionin_projects %}{% endblock twosectionin_projects %}
+{% comment %} конец второго блока страницы projects {% endcomment %}
+
+
+
+{% comment %} Начало первого блока страницы contact {% endcomment %}
+ {% block firstsectionin_contact %}{% endblock firstsectionin_contact %}
+{% comment %} конец первого блока страницы contact {% endcomment %}
+
+
+
+{% comment %} начало первого блока страницы types {% endcomment %}
+ {% block firstsectionin_types %}{% endblock firstsectionin_types %}
+{% comment %} конец первого блока страницы types {% endcomment %}
+
+
+
+{% comment %} начало первого блока для страниц по отдельным типам работ {% endcomment %}
+ {% block firstsectionin_build %}{% endblock firstsectionin_build %}
+
+
+
+
+
+
+
+
+{% comment %} начало футера {% endcomment %}
+    <footer class="footer">
+			<div class="container-fluid px-lg-5">
+				<div class="row">
+					<div class="col-md-9 py-5">
+						<div class="row">
+							<div class="col-md-4 mb-md-0 mb-4">
+								<h2 class="footer-heading">О нас</h2>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<ul class="ftco-footer-social p-0">
+		              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Telegram"><span class="fa fa-telegram"></span></a></li>
+		              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Whatsap"><span class="fa fa-whatsapp"></span></a></li>
+		              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Mail"><span class="fa fa-envelope"></span></a></li>
+		              <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Telephone"><span class="fa fa-phone"></span></a></li>
+		            </ul>
+		            </ul>
+							</div>
+							<div class="col-md-8">
+								<div class="row justify-content-center">
+									<div class="col-md-12 col-lg-10">
+										<div class="row">
+											<div class="col-md-4 mb-md-0 mb-4">
+												<h2 class="footer-heading">Services</h2>
+												<ul class="list-unstyled">
+						              <li><a href="#" class="py-1 d-block">Construction</a></li>
+						              <li><a href="#" class="py-1 d-block">House Renovation</a></li>
+						              <li><a href="#" class="py-1 d-block">Painting</a></li>
+						              <li><a href="#" class="py-1 d-block">Arhictecture Design</a></li>
+						            </ul>
+											</div>
+											<div class="col-md-4 mb-md-0 mb-4">
+												<h2 class="footer-heading">О компании</h2>
+												<ul class="list-unstyled">
+						              <li><a href="#" class="py-1 d-block">Staff</a></li>
+						              <li><a href="#" class="py-1 d-block">Team</a></li>
+						              <li><a href="#" class="py-1 d-block">Careers</a></li>
+						              <li><a href="#" class="py-1 d-block">Виды работ</a></li>
+						            </ul>
+											</div>
+											<div class="col-md-4 mb-md-0 mb-4">
+												<h2 class="footer-heading">Resources</h2>
+												<ul class="list-unstyled">
+						              <li><a href="#" class="py-1 d-block">Security</a></li>
+						              <li><a href="#" class="py-1 d-block">Global</a></li>
+						              <li><a href="#" class="py-1 d-block">Charts</a></li>
+						              <li><a href="#" class="py-1 d-block">Privacy</a></li>
+						            </ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+					<div class="col-md-3 py-md-5 py-4 aside-stretch-right pl-lg-5">
+						<h2 class="footer-heading">Обратная связь</h2>
+						<form action="#" class="contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ваше имя">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ваша почта">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ваш телефон">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Сообщение"></textarea>
+              </div>
+              <div class="form-group">
+              	<button type="submit" class="form-control submit px-3">Отправить</button>
+              </div>
+            </form>
+					</div>
+				</div>
+			</div>
+		</footer>
+{% comment %} конец футера {% endcomment %}
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static "deps/js/jquery.min.js" %}"></script>
+  <script src="{% static "deps/js/jquery-migrate-3.0.1.min.js" %}"></script>
+  <script src="{% static "deps/js/popper.min.js" %}"></script>
+  <script src="{% static "deps/js/bootstrap.min.js" %}"></script>
+  <script src="{% static "deps/js/jquery.easing.1.3.js" %}"></script>
+  <script src="{% static "deps/js/jquery.waypoints.min.js" %}"></script>
+  <script src="{% static "deps/js/jquery.stellar.min.js" %}"></script>
+  <script src="{% static "deps/js/jquery.animateNumber.min.js" %}"></script>
+  <script src="{% static "deps/js/owl.carousel.min.js" %}"></script>
+  <script src="{% static "deps/js/jquery.magnific-popup.min.js" %}"></script>
+  <script src="{% static "deps/js/scrollax.min.js" %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static "deps/js/google-map.js" %}"></script>
+  <script src="{% static "deps/js/main.js" %}"></script>
+    
+  </body>
+</html>

@@ -19,8 +19,19 @@ from django.urls import path
 
 from main import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index'),
-    path('about/', views.about, name='about'),
+    path('', views.index, name="index"),
+    path('about/', views.about, name="about"),
+    path('projects/', views.projects, name="projects"),
+    path('contact/', views.contact, name="contact"),
+    path('types/', views.types, name="types"),
+    path('types/building/', views.building, name="building"),
+    path('types/engineering', views.engineering, name="engineering"),
+    path('types/projection', views.projection, name="projection"),
+    path('types/decoration', views.decoration, name="decoration"),
+    path('types/design', views.design, name="design"),
+    path('types/ipoteka', views.ipoteka, name="ipoteka"),
+    
 ]

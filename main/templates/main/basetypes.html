@@ -1,0 +1,46 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block activetypes %}active{% endblock activetypes %}
+
+
+
+{% block firstsectionin_build %}
+<section class="ftco-section ftco-degree-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ftco-animate">
+          {% block info %}{% endblock info %}  
+        </div> <!-- .col-md-8 -->
+
+
+        <div class="col-lg-4 sidebar pl-lg-5 ftco-animate">
+          <div class="sidebar-box">
+            {% comment %} <form action="#" class="search-form">
+              <div class="form-group">
+                <span class="icon icon-search"></span>
+                <input type="text" class="form-control" placeholder="Type a keyword and hit enter">
+              </div>
+            </form> {% endcomment %}
+          </div>
+          <div class="sidebar-box ftco-animate">
+            <div class="categories">
+              <h3>Виды работ</h3>
+              <li><a href="{% url "building" %}">Строительство <span class="ion-ios-arrow-forward"></span></a></li>
+              <li><a href="{% url "projection" %}">Индивидуальное проектирование <span class="ion-ios-arrow-forward"></span></a></li>
+              <li><a href="{% url 'engineering' %}">Инженерные системы <span class="ion-ios-arrow-forward"></span></a></li>
+              <li><a href="{% url "decoration" %}">Внутренняя отделка <span class="ion-ios-arrow-forward"></span></a></li>
+              <li><a href="{% url "design" %}">Ландшафтный дизайн <span class="ion-ios-arrow-forward"></span></a></li>
+              <li><a href="{% url "ipoteka" %}">Ипотека <span class="ion-ios-arrow-forward"></span></a></li>
+            </div>
+          </div>
+
+          
+          <div class="sidebar-box ftco-animate">
+            {% block paragraph %}{% endblock paragraph %}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section> <!-- .section -->
+{% endblock firstsectionin_build %}

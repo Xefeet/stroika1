@@ -1,0 +1,80 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block pagename %}Виды работ{% endblock pagename %}
+{% block startimagelink %}
+    {% static "deps/images/bg_3.jpg" %} 
+{% endblock startimagelink %}
+{% block activetypes %}active{% endblock activetypes %}
+
+{% block keywords %}types{% endblock keywords %}
+
+{% block firstsectionin_types %}
+<section class="ftco-section">
+    <div class="container">
+      <div class="row d-flex">
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="{% url "building" %}" class="block-20 rounded" style="background-image: url({% static 'deps/images/image_1.jpg' %});"></a>
+            <div class="text mt-3 text-center">
+              <h3 class="heading"><a href="{% url "building" %}">Строительство жилых зданий</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="{% url "projection" %}" class="block-20 rounded" style="background-image: url({% static 'deps/images/image_2.jpg' %});"></a>
+            <div class="text mt-3 text-center">          
+              <h3 class="heading"><a href="{% url "projection" %}">Индивидуальное проектирование</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="{% url "engineering" %}" class="block-20 rounded" style="background-image: url({% static 'deps/images/image_3.jpg' %});">
+            </a>
+            <div class="text mt-3 text-center">
+                
+              <h3 class="heading"><a href="{% url "engineering" %}">Инженерные системы</a></h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="{% url "decoration" %}" class="block-20 rounded" style="background-image: url({% static 'deps/images/image_4.jpg' %});">
+            </a>
+            <div class="text mt-3 text-center">
+                
+              <h3 class="heading"><a href="{% url "decoration" %}">Внутренняя отделка</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="{% url "design" %}" class="block-20 rounded" style="background-image: url({% static 'deps/images/image_5.jpg' %});">
+            </a>
+            <div class="text mt-3 text-center">
+                
+              <h3 class="heading"><a href="{% url "design" %}">Ландшафтный дизайн</a></h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex ftco-animate">
+          <div class="blog-entry align-self-stretch">
+            <a href="{% url "ipoteka" %}" class="block-20 rounded" style="background-image: url({% static 'deps/images/image_6.jpg' %});">
+            </a>
+            <div class="text mt-3 text-center">
+                
+              <h3 class="heading"><a href="{% url "ipoteka" %}">Ипотека</a></h3>
+            </div>
+          </div>
+        </div>
+
+                  
+               
+
+      </div>
+    </div>
+  </section>
+{% endblock firstsectionin_types %}
